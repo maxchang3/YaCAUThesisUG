@@ -1,4 +1,4 @@
-%% yacaugrad.cls
+%% yacauthesisug.cls
 %% Copyright 2023 李明阳
 %% Copyright 2025 Max Chang
 %% This is a modified version of the caugraduatethesis.cls
@@ -14,7 +14,7 @@
 %%
 %% The Current Maintainer of this work is Max Chang.
 %%
-%% This work consists of the file yacaugrad.cls
+%% This work consists of the file yacauthesisug.cls
 %% and the derived files:
 %%   Logo.jpg
 %%   CAU_Course_Thesis_Template.tex
@@ -22,7 +22,7 @@
 %%   gb7714-2015.bbx
 %%   中国农业大学课程论文写作格式.doc
 %% ---------------------------------------------------------------------------
-%% Class Name   : yacaugrad
+%% Class Name   : yacauthesisug
 %% Description  : Yet Another China Agricultural University LaTeX Thesis Template for Undergraduate
 %% Repository   : https://github.com/maxchang3/yacaugrd
 %% Version      : 0.1
@@ -30,7 +30,7 @@
 %% E-mail       : hi@maxchang.me
 %% License      : LaTeX Project Public License v1.3c or later
 %% License URI  : https://www.latex-project.org/lppl.txt
-%% Files        : yacaugrad.cls
+%% Files        : yacauthesisug.cls
 %%                pictures/fig1.png
 %%                pictures/signature
 %%                pictures/title.jpg
@@ -58,7 +58,7 @@
 %%                      类声明和基本设置                        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{yacaugrad}
+\ProvidesClass{yacauthesisug}
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[a4paper]{article} % 继承自 article 文档类
 \input{causetup} % 导入配置文件

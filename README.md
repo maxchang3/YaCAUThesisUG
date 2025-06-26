@@ -7,13 +7,13 @@
 
 <img src="./pictures/CAU.png" height="100" align="right" />
 
-# YaCAUGrad
+# YaCAUThesisUG
 
-> Yet Another CAU LaTeX Thesis Template for Undergraduate
+> **Y**et **A**nother **CAU** LaTeX **Thesis** Template for **U**nder**g**raduate
 
 > 又一个中国农业大学**本科生**毕业论文 LaTeX 模板
 
-`yacaugrad` 是基于 [CAU-Undergraduate-Thesis-Template](https://github.com/Wubeizhongxinghua/CAU-Undergraduate-Thesis-Template) 项目的个人修改版本。
+`yacauthesisug` 是基于 [CAU-Undergraduate-Thesis-Template](https://github.com/Wubeizhongxinghua/CAU-Undergraduate-Thesis-Template) 项目的个人修改版本。
 
 遵循[《中国农业大学本科生毕业论文（设计）撰写基本规范》](https://cem.cau.edu.cn/module/download/downfile.jsp?classid=0&filename=c806c54bfaac421c9103c7760d3a77f9.pdf)，可自动生成符合要求的本科生毕业论文格式。
 
@@ -44,7 +44,7 @@
 
 ### 快速开始
 
-1. **下载模板**：克隆或下载模板文件到本地目录，或点击 <kbd>[Use this template](https://github.com/new?template_name=yacaugrad&template_owner=maxchang3)</kbd> 创建新仓库
+1. **下载模板**：克隆或下载模板文件到本地目录，或点击 <kbd>[Use this template](https://github.com/new?template_name=yacauthesisug&template_owner=maxchang3)</kbd> 创建新仓库
 2. **配置信息**：在 `private.tex` 中填写个人信息
 3. **设置论文**：在 `thesis.tex` 中设置论文基本信息
 4. **开始写作**：开始撰写论文内容
