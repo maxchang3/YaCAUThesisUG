@@ -1,9 +1,9 @@
 > [!TIP]
 > 此 $\LaTeX$ 模板仅支持本科生使用。如果您确定仅提交 PDF 即可满足老师审阅需求，强烈推荐使用 [Typst](https://typst.app/docs) 以获得更快的编译速度与更佳的编写体验。
 > 
-> **Typst 是一款现代化的文档排版工具，支持快速编写和实时预览，且具有更简洁的语法。目前生态正在快速发展。**
-> 
-> [CAU-ThesisTemplate-Typst](https://github.com/JWangL5/CAU-ThesisTemplate-Typst) 是一个优秀的模板，同时支持本硕博生。
+> **Typst 是一款现代化的文档排版工具，支持快速编写和实时预览，且具有更简洁的语法。目前生态正在快速发展。**[CAU-ThesisTemplate-Typst](https://github.com/JWangL5/CAU-ThesisTemplate-Typst) 是一个优秀的 基于 Typst 的 CAU 学位论文模板，同时支持本硕博生。
+>
+> 同时，您还可以使用 [touying-simpl-cau](https://github.com/maxchang3/touying-simpl-cau) 快速创建符合中国农业大学主题风格的演示文稿/幻灯片。
 
 <img src="./pictures/CAU.png" height="100" align="right" />
 
