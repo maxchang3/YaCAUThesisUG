@@ -34,7 +34,7 @@
 
 ### 快速开始
 
-1. **下载模板**：克隆或下载模板文件到本地目录，或点击 <kbd>Use this template</kbd> 创建新仓库
+1. **下载模板**：克隆或下载模板文件到本地目录，或点击 [<kbd>Use this template</kbd>](https://github.com/new?template_name=yacaugrad&template_owner=maxchang3) 创建新仓库
 2. **配置信息**：在 `private.tex` 中填写个人信息
 3. **设置论文**：在 `thesis.tex` 中设置论文基本信息
 4. **开始写作**：开始撰写论文内容
