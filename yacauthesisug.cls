@@ -289,7 +289,7 @@
       {\zihao{4}\songti
         \setlength{\parindent}{1.47cm}\makebox[9em][s]{学生姓名}：\underline{\makebox[14.6em][c]{\cauget{name}}}\\
         \setlength{\parindent}{1.47cm}\makebox[9em][s]{指导教师}：\underline{\makebox[14.6em][c]{\cauget{advisor} \cauget{advisor-title}}}\\
-        \setlength{\parindent}{1.47cm}\makebox[9em][s]{合作指导教师}：\underline{\makebox[14.6em][c]{\cauget{co-advisor}}}\\
+        \setlength{\parindent}{1.47cm}\makebox[9em][s]{合作指导教师}：\underline{\makebox[14.6em][c]{\cauget{co-advisor} \cauget{co-advisor-title}}}\\
         \setlength{\parindent}{1.47cm}\makebox[9em][s]{专业名称}：\underline{\makebox[14.6em][c]{\cauget{major}}}\\
       \setlength{\parindent}{1.47cm}\makebox[9em][s]{所在学院}：\underline{\makebox[14.6em][c]{\cauget{college}}}\\}
     \end{spacing}
