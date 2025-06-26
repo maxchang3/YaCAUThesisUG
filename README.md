@@ -61,7 +61,7 @@ xelatex → biber → xelatex → xelatex
 
 ### 配置文件
 
-推荐将个人信息和论文信息分开配置，便于管理和修改。
+`causetup.tex` 中的配置项可以在任意位置使用 `\causetup{key=value}` 命令进行设置。为了便于管理和修改，推荐将个人信息和论文信息分开配置。
 
 #### 个人信息配置 (`private.tex`)
 
@@ -70,14 +70,18 @@ xelatex → biber → xelatex → xelatex
 
 ```latex
 \causetup{
-    name           = {张三},
-    advisor        = {李教授},
-    advisor-title  = {教授},
-    co-advisor     = {王副教授},
-    major          = {计算机科学与技术},
-    college        = {信息与电气工程学院},
-    keywords       = {深度学习，神经网络，人工智能},
-    keywords-en    = {deep learning, neural network, artificial intelligence}
+    name       = {张其麦},
+    advisor    = {王一},
+    advisor-title = {副教授},
+    co-advisor  = {},
+    major      = {计算机科学与技术},
+    college    = {信息与电气工程学院},
+    education  = {
+      你的教育经历
+    },
+    introduction = {
+      男，2039 年 3 月出生，某某省某某人。
+    }
 }
 ```
 
@@ -85,8 +89,10 @@ xelatex → biber → xelatex → xelatex
 
 ```latex
 \causetup{
-    title      = {基于深度学习的图像识别技术研究},
-    title-en   = {Research on Image Recognition Technology Based on Deep Learning}
+    title       = {基于深度学习的图像识别技术研究},
+    title-en    = {Research on Image Recognition Technology Based on Deep Learning},
+    keywords    = {深度学习，神经网络，人工智能},
+    keywords-en = {deep learning, neural network, artificial intelligence}
 }
 ```
 
