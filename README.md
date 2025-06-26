@@ -2,15 +2,18 @@
 
 # YaCAUGrad
 
-> Yet Another China Agricultural University LaTeX Thesis Template for Undergraduate
+> Yet Another CAU LaTeX Thesis Template for Undergraduate
 
-> 又一个中国农业大学本科生毕业论文 LaTeX 模板
+> 又一个中国农业大学**本科生**毕业论文 LaTeX 模板
 
-`yacaugrad` 是基于 [CAU-Undergraduate-Thesis-Template](https://github.com/Wubeizhongxinghua/CAU-Undergraduate-Thesis-Template) 项目的改进版本，旨在提供更加完善和易用的中国农业大学本科毕业论文 LaTeX 模板。
+`yacaugrad` 是基于 [CAU-Undergraduate-Thesis-Template](https://github.com/Wubeizhongxinghua/CAU-Undergraduate-Thesis-Template) 项目的个人修改版本。
 
-遵循[《中国农业大学本科生毕业论文（设计）撰写基本规范》](https://cem.cau.edu.cn/module/download/downfile.jsp?classid=0&filename=c806c54bfaac421c9103c7760d3a77f9.pdf)，可自动生成符合要求的本科生毕业论文格式。**但是一些细节之处根据个人喜好主观进行了调整，可能不完全符合学校的要求，请根据实际情况进行修改。**
+遵循[《中国农业大学本科生毕业论文（设计）撰写基本规范》](https://cem.cau.edu.cn/module/download/downfile.jsp?classid=0&filename=c806c54bfaac421c9103c7760d3a77f9.pdf)，可自动生成符合要求的本科生毕业论文格式。
 
-## 主要特性
+> [!WARNING]
+> 一些细节之处根据个人喜好主观进行了调整，可能不完全符合学校的要求，请根据实际情况进行修改。
+
+## 主要修改
 
 本模板在原版基础上进行了以下改进：
 
@@ -19,7 +22,6 @@
 - **完整文档结构**：添加原创性声明等原始模板中缺少的内容
 - **简化操作流程**：抽象常用命令和环境，简化文档编写
 - **规范化单位**：将页面设置中的 `pt` 单位统一为 `mm`/`bp`
-
 
 ## 使用指南
 
