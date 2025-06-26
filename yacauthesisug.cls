@@ -24,7 +24,7 @@
 %% ---------------------------------------------------------------------------
 %% Class Name   : yacauthesisug
 %% Description  : Yet Another China Agricultural University LaTeX Thesis Template for Undergraduate
-%% Repository   : https://github.com/maxchang3/yacaugrd
+%% Repository   : https://github.com/maxchang3/yacauthesisug
 %% Version      : 0.1
 %% Copyright    : 2025 Max Chang
 %% E-mail       : hi@maxchang.me
@@ -37,7 +37,6 @@
 %%                pictures/title.png
 %%                causetup.tex
 %%                thesis.tex
-%%                thesis.pdf
 %% ---------------------------------------------------------------------------
 %% Class Name   : caugraduatethesis
 %% Description  : China Agricultural University Undergraduate Thesis LaTeX Template
