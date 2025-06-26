@@ -1,0 +1,67 @@
+{
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.hover.command.enabled": true,
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        // "*.gz"
+    ],
+    "latex-workshop.latex.outDir": "./.tmp",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "--output_directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                // "-pdf",
+                "%DOC%"
+            ]
+        },
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex -> biber/bibtex -> xelatex -> xelatex",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true,
+        "zh-hant": true,
+    },
+    "editor.wordWrap": "on"
+}

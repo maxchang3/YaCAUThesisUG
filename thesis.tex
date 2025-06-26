@@ -1,0 +1,324 @@
+\documentclass{yacaugrad}
+
+\usepackage{ctex}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{etoolbox}
+\usepackage{seqsplit}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{ulem}
+\usepackage{lipsum}
+\usepackage{caption}
+
+\setlength{\parindent}{\ccwd}
+\addbibresource{ref.bib} % 添加bib文件
+\renewcommand{\listfigurename}{插图}
+\renewcommand{\listtablename}{附表}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 一般情况下，您无须修改以上内容 %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%--------------------- 设置元数据 ----------------------
+\input{private.tex}
+%--------------------- 生成封面 ----------------------
+\causetup{
+  title      = {你的毕业设计题目},
+  title-en   = {Your Thesis Title}
+}
+\makecover
+
+%--------------------- 空一页 -----------------------
+\emptypage
+
+%--------------------- 原创性声明 ----------------------
+
+\makeoriginality{./pictures/signature.png}
+
+%--------------------- 摘要和关键字 ----------------------
+\pagenumbering{Roman} % 罗马数字页码
+% 生成中英文摘要页
+\causetup{
+  keywords = {
+    你的关键词1, 你的关键词2, 你的关键词3，你的关键词4，你的关键词5
+  },
+  keywords-en = {
+    Your keywords1, Your keywords2, Your keywords3, Your keywords4, Your keywords5
+  },
+}
+
+\begin{abstract}
+  这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。
+
+  这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。
+
+  这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。这是摘要的一段。
+
+\end{abstract}
+
+\begin{abstract*}
+  This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract.
+
+  This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract.
+
+  This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract. This is a paragraph of the abstract.
+\end{abstract*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% 一般情况下，您无须修改以下内容 %%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------- 目录 -----------------------------
+\setcounter{tocdepth}{2} % 只显示到第二级标题
+\tableofcontents
+
+%--------------------- 插图和附表清单 ----------------------
+\makelistoffigtbl
+
+%%%%%%%%%%%%%%%%%%%%%%%% 一般情况下，您无须修改以上内容 %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------- 主要符号和术语表 ----------------------
+%留空
+\newpage
+\section*{主要符号和术语表}
+\cautable{}{ll}{}{tbl:term}{
+  % \toprule %三线表第一线
+  % \textbf{符号与术语} & \textbf{含义} \\
+  % \midrule %三线表第二线
+  a & 字母a \\
+  b & 字母b \\
+  c & 字母c \\
+  % \bottomrule %三线表第三线
+}
+
+%--------------------- 正文 ---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% 一般情况下，您无须修改以下内容 %%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagenumbering{arabic} % 阿拉伯数字页码
+\setcounter{page}{1}
+\setcounter{section}{0}
+%设置页眉格式
+\pagestyle{fancy} % 清除原页眉页脚样式
+\renewcommand{\sectionmark}[1]{\markboth{第\zhnumber{\thesection} 章~#1}{}} % 修改页眉的chaptermark
+\fancyhf{}
+\fancyhead[R]{\zihao{-5}\songti \leftmark} %\leftmark：表示“一级标题”
+\fancyhead[L]{\zihao{-5}\songti 中国农业大学本科生毕业论文（设计）}
+% \fancyhead[C]{\rule[-2pt]{0.4pt}{10pt}\hspace{3pt}\rule[4pt]{1.5cm}{0.4pt}\hspace{3pt}\leftmark\hspace{3pt}\rule[4pt]{1.5cm}{0.4pt}\hspace{3pt}\rule[-2pt]{0.4pt}{10pt}} % 设置双线页眉线和章节标题
+\fancyfoot[C]{\thepage}
+\renewcommand\headrulewidth{3pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \hrule\@height\headrulewidth\@width\headwidth
+    \vskip 1pt% 2pt between lines
+    \hrule\@height1pt\@width\headwidth% lower line with .5pt line width
+    \vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%% 一般情况下，您无须修改以上内容 %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{测试标题}
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容。
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+\subsection{测试小标题}
+\subsubsection{测试小小标题}
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+\subsection{测试小标题}
+\subsubsection{测试小小标题}
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+第一章节的正文内容第一章节的正文内容\cite{Huzhenzhen2018}第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+\subsection{测试小标题}
+\subsubsection{测试小小标题}
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+第一章节的正文内容第一章节的正文内容第一章节的正文内容第一章节的正文内容
+
+\section{这是第二章的标题}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+
+\subsection{第二章的一个小标题}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+
+\subsection{第二章的另一个小标题}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容\cite{汪昂1881}第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+
+\subsubsection{第二章的一个子标题}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\subsection{公式展示}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\begin{equation} \label{eq:ex1}
+  \begin{array}{l}
+    \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon _0}  \\
+    \nabla \cdot \mathbf{B} = 0 \\
+    \nabla \times  \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t }  \\
+    \nabla \times  \mathbf{B} = \mu _0\mathbf{J} + \mu _0\varepsilon_0 \frac{\partial \mathbf{E}}{\partial t }
+  \end{array}
+\end{equation}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容。如公式(\ref{eq:ex1})所示。第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\subsection{表格展示}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\cautable{这里是表格标题}{ZZZZ}{这里是表格注释}{tbl:ex1}{
+  \toprule %三线表第一线
+  a & b & c & d \\
+  \midrule %三线表第二线
+  1 & 2 & 3 & 10 \\
+  4 & 5 & 6 & 11 \\
+  7 & 8 & 9 & 12 \\
+  \bottomrule %三线表第三线
+}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容。如表(\ref{tbl:ex1})所示。第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\subsection{图片展示}
+
+第二章节的正文内容第二章节的正文内容\cite{王夫之1845}第二章节的正文内容
+第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\caufig{
+  ./pictures/fig1.png
+}{
+  这是图片的标题
+}{
+  这是对于图片的详细介绍
+}{0.6}{fig:ex1}
+
+第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容第二章节的正文内容。如图(\ref{fig:ex1})所示。第二章节的正文内容第二章节的正文内容第二章节的正文内容第二章节的正文内容
+第二章节的正文内容
+
+\section{第三章节的名字}
+
+第三章节的正文内容第三章节的正文内容第三章节的正文内容
+第三章节的正文内容第三章节的正文内容第三章节的正文内容第三章节的正文内容第三章节的正文内容第三章节的正文内容
+第三章节的正文内容
+
+\cautable{第三章的表格标题}{ZZZZ}{}{tbl:ex2}{
+  \toprule %三线表第一线
+  a & b & c & d \\
+  \midrule %三线表第二线
+  1 & 2 & 3 & 10 \\
+  4 & 5 & 6 & 11 \\
+  7 & 8 & 9 & 12 \\
+  \bottomrule %三线表第三线
+}
+
+第三章节的正文内容第三章节\cite{KENNEDY1975-339-360}的正文内容第三章节的正文内容
+第三章节的正文内容第三章节的正文内容。如表(\ref{tbl:ex2})所示。第三章节的正文内容第三章节的正文内容第三章节的正文内容第三章节的正文内容
+第三章节的正文内容
+
+\subsection{第三章的第一小节}
+
+第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。
+
+第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。
+
+\caufig{
+  ./pictures/fig2.jpg
+}{
+  这张图片没有描述
+}{}{0.6}{fig:ex2}
+
+第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。
+第三章节的正文内容第三章节的正文内容，如图\ref{fig:ex2}所示。第三章节的正文内容第三章节的正文内容。第三章节的正文内容第三章节的正文内容。
+
+% 生成参考文献
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\makebib
+
+% 生成致谢
+\begin{thank}
+  谢谢大家！
+\end{thank}
+
+% 生成附录
+\makeappx{
+  \para{这里是附录的内容。}
+  \caufig{
+    ./pictures/fig2.jpg
+  }{
+    一张附录的图
+  }{}{0.6}{fig:ex2}
+  \para{
+    以下是代码实例。
+  }
+  \lstinputlisting{./codes/codes.py}
+}
+
+% 生成作者简介
+\makeprofile{
+  \cauget{name}，\cauget{introduction}
+}{
+  \cauget{education}
+}{
+  % 这是作者本科期间发表的论文
+  无
+}{
+  % 这是作者本科期间参与的科研项目
+  无
+}{
+  % 这是作者本科期间获得的荣誉
+  无
+}{
+  % 这是作者的其他成果
+  无
+}
+\end{document}

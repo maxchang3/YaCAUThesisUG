@@ -1,0 +1,32 @@
+\usepackage{kvoptions}
+
+\SetupKeyvalOptions{
+  family = cau,
+  prefix = cau@
+}
+
+\makeatletter
+
+% ======= 使用标准接口定义键值 =======
+\DeclareStringOption[cau]{title}
+\DeclareStringOption[cau]{title-en}
+\DeclareStringOption[cau]{name}
+\DeclareStringOption[cau]{advisor}
+\DeclareStringOption[cau]{advisor-title}
+\DeclareStringOption[cau]{co-advisor}
+\DeclareStringOption[cau]{major}
+\DeclareStringOption[cau]{college}
+\DeclareStringOption[cau]{keywords}
+\DeclareStringOption[cau]{keywords-en}
+\DeclareStringOption[cau]{introduction}
+\DeclareStringOption[cau]{education}
+
+\newcommand{\causetup}[1]{%
+  \kvsetkeys{cau}{#1}%
+}
+
+\newcommand{\cauget}[1]{%
+  \csname cau@#1\endcsname%
+}
+
+\makeatother
