@@ -35,15 +35,22 @@
 
 ## 使用指南
 
+
 ### 环境推荐
 
-| 组件                 | 推荐/说明                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
-| LaTeX 发行版         | 推荐 [TeXLive](https://www.tug.org/texlive/) 2023 或更新版本                                      |
+| 组件                 | 推荐/说明                                                                              |
+| -------------------- | -------------------------------------------------------------------------------------- |
+| LaTeX 发行版         | 推荐 [TeXLive](https://www.tug.org/texlive/) 2023 或更新版本                           |
 | 编辑器               | [VS Code](https://code.visualstudio.com/) 并使用推荐的插件（首次进入工作区会提示安装） |
-| 文献管理工具（可选） | [Zotero](https://www.zotero.org/) 或 [JafRef](https://www.jabref.org/)                            |
+| 文献管理工具（可选） | [Zotero](https://www.zotero.org/) 或 [JafRef](https://www.jabref.org/)                 |
 
 如果需要插入额外的页面（如任务书等），可以先使用 Word 导出 PDF，然后使用 PDF Expert 或 Adobe Acrobat 等工具进行编辑插入。
+
+### 编译流程
+
+```bash
+xelatex → biber → xelatex → xelatex
+```
 
 ### 快速开始
 
@@ -112,19 +119,6 @@
 | `\caufig{路径}{标题}{描述}{宽度}{引用标签}`     | 插入图片 |
 | `\cautable{标题}{列格式}{注释}{引用标签}{内容}` | 插入表格 |
 
-## 编译说明
-
-**标准编译流程**：
-```bash
-xelatex → biber → xelatex → xelatex
-```
-
-**推荐开发环境**：
-- Visual Studio Code
-  - LaTeX Workshop 扩展
-  - LaTeX Utilities 扩展
-
-支持自动编译和实时预览功能。
 
 ## License
 
