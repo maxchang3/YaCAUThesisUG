@@ -73,7 +73,6 @@ xelatex → biber → xelatex → xelatex
     name       = {张其麦},
     advisor    = {王一},
     advisor-title = {副教授},
-    co-advisor  = {},
     major      = {计算机科学与技术},
     college    = {信息与电气工程学院},
     education  = {
